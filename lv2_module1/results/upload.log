@@ -1,0 +1,16 @@
+[업로드 기록] OpenCR 펌웨어 업로드 및 성공 확인
+
+사용한 펌웨어: 직접 빌드 (output/opencr_position_p.ino.bin, 103KB)
+※ 커스텀 파서에 `?` 상태 조회 명령을 직접 추가하여 재컴파일·재업로드한 버전 사용
+
+--- 업로드 명령과 출력 (OpenCR_빌드_업로드_가이드.md 8단계 기준) ---
+
+$ "$UPLOADER" "$PORT" 115200 "$BASE/output/opencr_position_p.ino.bin" 1 2>&1 | tee "$BASE/upload.log"
+CRC OK 9B81E2 9B81E2 0.003000 sec
+[OK] Download
+
+--- 업로드 이후 준비 상태 확인 (이동 명령 없이 확인) ---
+
+$ python3 -m serial.tools.miniterm /dev/ttyACM0 115200 --eol LF -e
+?
+READY: s <Kp> <speed_deg_s|max> <angle_deg>; k/v/a set; s start; x stop. Newline.

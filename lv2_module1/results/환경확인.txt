@@ -1,0 +1,24 @@
+[환경 확인] 라즈베리파이 원격 수행 환경
+
+호스트명 (hostname): pa24
+Ubuntu 버전 (cat /etc/os-release): Ubuntu 22.04.5 LTS
+아키텍처 (uname -m): aarch64
+OpenCR 연결 포트 (ls -l /dev/ttyACM*): crw-rw-rw- 1 root dialout 166, 0 Sep 16 16:45 /dev/ttyACM0
+dialout 그룹 포함 여부 (id -nG): pa24 adm dialout cdrom floppy sudo audio dip video plugdev netdev lxd
+
+--- 아래에 실제 명령과 출력을 그대로 붙여넣으세요 ---
+
+$ hostname
+pa24
+
+$ cat /etc/os-release
+Ubuntu 22.04.5 LTS
+
+$ uname -m
+aarch64
+
+$ ls -l /dev/ttyACM*
+crw-rw-rw- 1 root dialout 166, 0 Sep 16 16:45 /dev/ttyACM0
+
+$ id -nG
+pa24 adm dialout cdrom floppy sudo audio dip video plugdev netdev lxd

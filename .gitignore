@@ -1,0 +1,29 @@
+# 제공 자료 클론 (자체 .git을 가진 별도 저장소이므로 제외)
+lv2_module1/reference/
+
+# 에디터 설정
+.obsidian/
+.vscode/
+.idea/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 빌드 중간 산출물
+*.o
+*.elf
+
+# 인증 정보 (제출 금지)
+.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# 주의: results/*.log 는 제출 증거이므로 무시하지 않는다 (*.log 패턴 사용 금지)

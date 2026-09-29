@@ -1,0 +1,34 @@
+[실행 A 기록] 목표 입력 이후 응답
+ 
+모터 모델 / ID: XM430-W210 / DXL_ID = 1
+게인(Kp): 0.5 (Ki=0, Kd=0)
+목표각: 20 deg (상대 목표각)
+속도 상한: 15 deg/s
+사용 예제 이름: opencr_position_p (커스텀 수정판 — 휠 모드 + 엔코더 P 제어, `?` 상태조회 명령 추가)
+ 
+--- 실행 명령 ---
+ 
+$ python3 -m serial.tools.miniterm /dev/ttyACM0 115200 --eol LF -e | tee ~/실행A.log
+s 0.5 15 20
+START: current position = 0 deg.
+P SET Kp=0.5000, Ki=0.0000, Kd=0.0000, speed_limit_deg_s=15.000, angle_deg=20.000
+Run timeout [s]: 60.0
+ 
+--- 목표 변경(t=2.0s) 이후 측정값 (10Hz 로그, target_deg/position_deg/u_deg_s 등) ---
+ 
+target_deg:20.000  position_deg:0.000   error_deg:20.000  u_deg_s:9.618  v_limit_deg_s:15.000  t_s:2.000
+target_deg:20.000  position_deg:4.043   error_deg:15.957  u_deg_s:8.244  v_limit_deg_s:15.000  t_s:2.500
+target_deg:20.000  position_deg:7.559   error_deg:12.441  u_deg_s:6.870  v_limit_deg_s:15.000  t_s:3.000
+target_deg:20.000  position_deg:10.459  error_deg:9.541   u_deg_s:4.122  v_limit_deg_s:15.000  t_s:3.500
+target_deg:20.000  position_deg:12.480  error_deg:7.520   u_deg_s:4.122  v_limit_deg_s:15.000  t_s:4.000
+target_deg:20.000  position_deg:15.908  error_deg:4.092   u_deg_s:1.374  v_limit_deg_s:15.000  t_s:5.200
+target_deg:20.000  position_deg:18.633  error_deg:1.367   u_deg_s:0.000  v_limit_deg_s:15.000  t_s:7.201
+target_deg:20.000  position_deg:18.633  error_deg:1.367   u_deg_s:0.000  v_limit_deg_s:15.000    t_s:9.901
+ 
+(t=7.2s 이후 position_deg가 18.633°에서 더 이상 진행하지 않고 정체됨 — error_deg 1.367°로 데드밴드(0.2°)보다 크지만
+p_deg_s=0.684deg/s 로는 실제 구동을 못 시킨 것으로 보임. 전체 원본 로그는 별도 보관.)
+ 
+--- 종료 시 정지 확인 ---
+ 
+$ x
+STOP: user
