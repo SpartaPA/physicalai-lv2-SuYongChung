@@ -1,0 +1,6 @@
+# exp1 A (S lower=150)
+hsv_lower1: Integer values are: [100, 150, 50]
+hsv_lower2: Integer values are: [100, 150, 50]
+# exp1 B (S lower=200) - 노드 재시작 시 -p로 지정
+hsv_lower1: Integer values are: [100, 200, 50]
+hsv_lower2: Integer values are: [100, 200, 50]

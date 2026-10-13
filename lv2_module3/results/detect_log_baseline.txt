@@ -1,0 +1,1 @@
+DETECT cx=276.2 cy=383.9 area=5606 contours=3 drop_area=1 drop_circ=1

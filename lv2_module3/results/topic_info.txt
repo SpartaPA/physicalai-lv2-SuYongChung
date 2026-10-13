@@ -1,0 +1,135 @@
+/camera/aligned_depth_to_color/image_raw [sensor_msgs/msg/Image]
+/camera/camera/color/camera_info [sensor_msgs/msg/CameraInfo]
+/camera/camera/color/image_raw [sensor_msgs/msg/Image]
+/camera/camera/color/metadata [realsense2_camera_msgs/msg/Metadata]
+/camera/camera/depth/camera_info [sensor_msgs/msg/CameraInfo]
+/camera/camera/depth/image_rect_raw [sensor_msgs/msg/Image]
+/camera/camera/depth/metadata [realsense2_camera_msgs/msg/Metadata]
+/camera/camera/extrinsics/depth_to_color [realsense2_camera_msgs/msg/Extrinsics]
+/camera/color/camera_info [sensor_msgs/msg/CameraInfo]
+/camera/color/image_raw [sensor_msgs/msg/Image]
+/camera/pose [geometry_msgs/msg/PoseStamped]
+/clock [rosgraph_msgs/msg/Clock]
+/cmd_vel [geometry_msgs/msg/Twist]
+/detection [geometry_msgs/msg/PointStamped]
+/image_annotated [sensor_msgs/msg/Image]
+/initialpose [geometry_msgs/msg/PoseWithCovarianceStamped]
+/joint_states [sensor_msgs/msg/JointState]
+/mask [sensor_msgs/msg/Image]
+/parameter_events [rcl_interfaces/msg/ParameterEvent]
+/perception_status [std_msgs/msg/String]
+/robot_description [std_msgs/msg/String]
+/rosout [rcl_interfaces/msg/Log]
+/target [geometry_msgs/msg/PointStamped]
+/target_marker [visualization_msgs/msg/Marker]
+/target_marker_array [visualization_msgs/msg/MarkerArray]
+/tf [tf2_msgs/msg/TFMessage]
+/tf_static [tf2_msgs/msg/TFMessage]
+/tracking/bbox [geometry_msgs/msg/PolygonStamped]
+/tracking/image [sensor_msgs/msg/Image]
+/tracking/image_plane [sensor_msgs/msg/PointCloud2]
+/tracking/mask [sensor_msgs/msg/Image]
+/tracking/preview/compressed [sensor_msgs/msg/CompressedImage]
+===== /camera/camera/color/image_raw =====
+Type: sensor_msgs/msg/Image
+
+Publisher count: 1
+
+Node name: camera
+Node namespace: /camera
+Topic type: sensor_msgs/msg/Image
+Topic type hash: RIHS01_d31d41a9a4c4bc8eae9be757b0beed306564f7526c88ea6a4588fb9582527d47
+Endpoint type: PUBLISHER
+GID: 01.0f.3b.08.3e.d2.a4.6a.00.00.00.00.00.00.16.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (1)
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: color_detector
+Node namespace: /
+Topic type: sensor_msgs/msg/Image
+Topic type hash: RIHS01_d31d41a9a4c4bc8eae9be757b0beed306564f7526c88ea6a4588fb9582527d47
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.3b.08.fa.d3.19.66.00.00.00.00.00.00.13.04
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): KEEP_LAST (5)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+===== /mask =====
+Type: sensor_msgs/msg/Image
+
+Publisher count: 1
+
+Node name: color_detector
+Node namespace: /
+Topic type: sensor_msgs/msg/Image
+Topic type hash: RIHS01_d31d41a9a4c4bc8eae9be757b0beed306564f7526c88ea6a4588fb9582527d47
+Endpoint type: PUBLISHER
+GID: 01.0f.3b.08.fa.d3.19.66.00.00.00.00.00.00.15.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (1)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+===== /detection =====
+Type: geometry_msgs/msg/PointStamped
+
+Publisher count: 1
+
+Node name: color_detector
+Node namespace: /
+Topic type: geometry_msgs/msg/PointStamped
+Topic type hash: RIHS01_4c0296af86e01e562e9e0405d138a01537247580076c58ea38d7923ac1045897
+Endpoint type: PUBLISHER
+GID: 01.0f.3b.08.fa.d3.19.66.00.00.00.00.00.00.17.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+===== /image_annotated =====
+Type: sensor_msgs/msg/Image
+
+Publisher count: 1
+
+Node name: color_detector
+Node namespace: /
+Topic type: sensor_msgs/msg/Image
+Topic type hash: RIHS01_d31d41a9a4c4bc8eae9be757b0beed306564f7526c88ea6a4588fb9582527d47
+Endpoint type: PUBLISHER
+GID: 01.0f.3b.08.fa.d3.19.66.00.00.00.00.00.00.18.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (1)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+

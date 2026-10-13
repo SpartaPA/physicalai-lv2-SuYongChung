@@ -1,0 +1,2 @@
+5초 동안 /detection 메시지 미발행(검출 없음)
+NO DETECTION contours=2 drop_area=1 drop_circ=1

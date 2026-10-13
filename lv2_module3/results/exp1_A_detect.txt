@@ -1,0 +1,11 @@
+header:
+  stamp:
+    sec: 1791787704
+    nanosec: 2277100
+  frame_id: camera_color_optical_frame
+point:
+  x: 282.5501751751752
+  y: 375.90071321321324
+  z: 0.0
+---
+DETECT cx=282.4 cy=376.2 area=5333 contours=3 drop_area=1 drop_circ=1

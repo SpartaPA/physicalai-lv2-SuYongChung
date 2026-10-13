@@ -1,0 +1,7 @@
+# no_target (최종 선택값)
+hsv_lower1: Integer values are: [100, 150, 50]
+hsv_upper1: Integer values are: [130, 255, 255]
+hsv_lower2: Integer values are: [100, 150, 50]
+hsv_upper2: Integer values are: [130, 255, 255]
+min_area: Double value is: 500.0
+min_circularity: Double value is: 0.6
